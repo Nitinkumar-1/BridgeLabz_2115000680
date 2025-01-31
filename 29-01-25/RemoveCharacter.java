@@ -7,12 +7,13 @@ public class RemoveCharacter {
         System.out.print("Enter the character to remove: ");
         char charToRemove = scanner.next().charAt(0);
         scanner.close();
-        StringBuilder result = new StringBuilder();
+
+        String result = "";
         for (char c : input.toCharArray()) {
             if (c != charToRemove) {
-                result.append(c);
+                result += c;
             }
         }
-        System.out.println("Modified string: " + result.toString());
+        System.out.println("Modified string: " + result);
     }
 }
