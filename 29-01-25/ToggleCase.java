@@ -5,7 +5,8 @@ public class ToggleCase {
         System.out.print("Enter a string: ");
         String input = scanner.nextLine();
         scanner.close();
-        StringBuilder toggledString = new StringBuilder();
+
+        StringBuffer toggledString = new StringBuffer();
         for (char c : input.toCharArray()) {
             if (Character.isUpperCase(c)) {
                 toggledString.append(Character.toLowerCase(c));
