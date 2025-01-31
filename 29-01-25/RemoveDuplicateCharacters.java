@@ -1,18 +1,19 @@
 import java.util.Scanner;
-public class RemoveDuplicateCharacters {
+public class RemoveCharacter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String input = scanner.nextLine();
+        System.out.print("Enter the character to remove: ");
+        char charToRemove = scanner.next().charAt(0);
         scanner.close();
-        StringBuilder result = new StringBuilder();
-        boolean[] seen = new boolean[256];
+
+        String result = "";
         for (char c : input.toCharArray()) {
-            if (!seen[c]) {
-                result.append(c);
-                seen[c] = true;
+            if (c != charToRemove) {
+                result += c;
             }
         }
-        System.out.println("Modified string: " + result.toString());
+        System.out.println("Modified string: " + result);
     }
 }
