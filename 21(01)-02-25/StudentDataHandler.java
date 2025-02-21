@@ -12,7 +12,7 @@ class Student {
 public class StudentDataHandler {
     private static final String FILE_NAME = "student_data.bin";
     public static void main(String[] args) {
-        Student student = new Student(005, "Aashi Mittal", 3.75);
+        Student student = new Student(005, "Nitin Kumar", 3.75);
         writeStudentData(student);
         readStudentData();
     }
